@@ -1,0 +1,19 @@
+<!--index.wxml-->
+
+
+
+<!-- 底部菜单 -->
+<view class="page">
+  <import src="../components/tabbar/tabbar" />
+  <template is="tabbar" data="{{tabbar}}"/>
+</view>
+
+
+<!-- 用户授权弹框 -->
+<view class="justZhi" wx:if="{{isuserInfo}}">
+  <view class="zhiSuccess">
+    <view style="font-size:30rpx;font-weight:bold;text-align:center;margin:30rpx 0;">授权提醒</view>
+    <view style="width:80%;margin:50rpx auto;font-size:28rpx;">授权允许小程序获取您的昵称,头像等信息.</view>
+    <button open-type="getUserInfo" class="confirm" bindgetuserinfo='bindGetUserInfo'>授权登录</button>
+  </view>
+</view>
