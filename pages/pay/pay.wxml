@@ -1,0 +1,7 @@
+<!--pages/pay/pay.wxml-->
+<view class="card">
+  <view>支付押金100元</view>
+  <text>随时可退</text>
+</view>
+
+<view class="pay" bindtap="payFunction" >立即支付</view>

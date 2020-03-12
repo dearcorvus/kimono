@@ -1,0 +1,26 @@
+/* pages/rule/rule.wxss */
+page{
+  background-color: #e55f53;
+}
+.text_box{
+  width: 90%;
+  height: 1000rpx;
+  margin: 20rpx auto;
+  border-radius: 20rpx;
+  background-color: #fff;
+  padding: 20rpx;
+  box-sizing: border-box; 
+  overflow:scroll;
+}
+.btn{
+  width: 90%;
+  height: 100rpx;
+  margin: 20rpx auto;
+  border-radius: 60rpx;
+  background-color: #f8ca5a;
+  font-size: 32rpx;
+  color:#fff;
+  text-align: center;
+  line-height: 100rpx;
+}
+

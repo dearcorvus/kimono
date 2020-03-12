@@ -1,0 +1,142 @@
+/* pages/goodslist/goodslist.wxss */
+page{
+  background-color: #f4f4f4;
+}
+.top{
+  width: 100%;
+  height: 90rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 36rpx;
+  color: #646464;
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  top:0;
+  z-index: 99;
+}
+.search{
+  width: 45rpx;
+  height: 45rpx;
+}
+.navbox{
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 列表 */
+.help-select-contet {
+    column-count: 2;    
+    column-gap: 4rpx;
+    width: 100%;
+    margin-top: 100rpx;
+}
+.help-select-card {
+    background: #fff;
+    width: 99%;
+    display: inline-block; /*内部卡片需要设置为inline-block,否则会截断显示，如图一*/
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20rpx 15rpx;
+    margin-bottom: 10rpx;
+    box-sizing: border-box;
+}
+.help-select-iamge{
+  width: 100%;
+}
+
+/* 分类 */
+.goods_type{
+  width: 200rpx;
+  height: 80rpx;
+  font-size: 32rpx;
+  color:#fff;
+  line-height: 80rpx;
+  background-color: #53cfb5;
+  position: fixed;
+  bottom: 100rpx;
+  left:0;
+  right:0;
+  margin:0 auto;
+  text-align: center;
+  border-radius: 40rpx;
+}
+
+.action-sheet-item{
+  background-color: red;
+}
+
+/* 切换 */
+.nav_check{
+  color:#53cfb5;
+  border-bottom:1px solid #5ee3c6;
+}
+
+
+
+/* 酒店 */
+.hotel_box{
+  width:700rpx;
+  margin: 100rpx auto;
+}
+.hotel_child{
+  width: 100%;
+  height: 600rpx;
+  background-size:100% auto;
+  border-top-left-radius:10rpx;
+  border-top-right-radius:10rpx;  
+  position: relative;
+  margin-bottom: 20rpx;
+}
+.hotel_info{
+  position: absolute;
+  left: 0;bottom: 0;
+  width: 100%;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+  background-color:#fff; 
+}
+.hotel_title{
+  font-size: 32rpx;
+  color: #000;
+  line-height: 50rpx;
+}
+.hotel_time{
+  font-size: 18rpx;
+  color: #7f7f7f;
+  line-height: 38rpx;
+}
+.hotel_address{
+  font-size: 20rpx;
+  color: #7f7f7f;
+}
+.hotel_type{
+  margin-top: 20rpx;
+  display: grid;
+  grid-gap: 5rpx;
+  grid-template-columns:repeat(auto-fit,100rpx); 
+  grid-template-rows: repeat(2,auto);
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
+}
+.hotel_type view{
+  width: 100rpx;
+  height: 40rpx;
+  font-size:20rpx;
+  line-height: 40rpx;
+  text-align: center; 
+  border-radius: 20rpx;
+  border:1px solid #7f7f7f;
+}
+
+
+
+.hotel_child navigator{
+  width: 100%;
+  height: 100%;
+}

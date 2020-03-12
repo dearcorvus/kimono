@@ -1,0 +1,42 @@
+<!--pages/order/order.wxml-->
+<view class="order_box">
+  <view class="order_child" wx:for='{{order_item}}'>
+    <view class="order_info">
+      <text>{{item.name}}</text>
+      <view class="order_time">{{item.create_time}}</view>
+      <view class="order_day">17分45秒</view> 
+      <view class="price">{{item.price == '' ? '0' : item.price}}元</view>
+    </view>
+    <view class='order_static' >{{item.status == 2 ? '进行中' : item.status == 3 ? '待支付' : '已完结'}}</view>
+  </view>
+  
+  <!-- <view class="order_child">
+    <view class="order_info">
+      <text>春华秋实</text>
+      <view class="order_time">2019-11-09 15:20</view>
+      <view class="order_day">17分45秒</view> 
+      <view class="price">2元</view>
+    </view>
+    <view class='order_static' >待付款</view>
+  </view>
+
+  <view class="order_child">
+    <view class="order_info">
+      <text>春华秋实</text>
+      <view class="order_time">2019-11-09 15:20</view>
+      <view class="order_day">17分45秒</view> 
+      <view class="price">2元</view>
+    </view>
+    <view class='order_static' >待付款</view>
+  </view>
+
+  <view class="order_child">
+    <view class="order_info">
+      <text>春华秋实</text>
+      <view class="order_time">2019-11-09 15:20</view>
+      <view class="order_day">17分45秒</view> 
+      <view class="price">2元</view>
+    </view>
+    <view class='order_static' >待付款</view>
+  </view>       -->
+</view>

@@ -1,0 +1,30 @@
+/* pages/pay/pay.wxss */
+.card{
+  width: 95%;
+  height: 160rpx;
+  background-color: #b7ed14;
+  margin: 20rpx auto;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.card view{
+  font-size: 36rpx;
+  color: #333;
+}
+.card text{
+  font-size: 32rpx;
+  color: #e55f53;
+}
+.pay{
+  width: 90%;
+  height: 110rpx;
+  border-radius: 20rpx;
+  background-color: #b7ed14;
+  text-align: center;
+  line-height: 110rpx;
+  position: fixed;
+  bottom: 50rpx;
+  left: 0;right: 0;
+  margin: 0 auto;
+}

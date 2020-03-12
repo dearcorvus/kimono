@@ -1,0 +1,45 @@
+<!--pages/hoteinfo/hotelinfo.wxml-->
+<!-- banner -->
+<view class="page-section page-section-spacing swiper" >
+  <swiper indicator-dots="{{indicatorDots}}"  style="width:{{imagewidth}}px;height:{{imageheight}}px;" 
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" >
+    <block wx:for="{{imgUrls}}" wx:key="*this">
+      <swiper-item>
+        <image class="swiper-item" style="width:{{imagewidth}}px;height:{{imageheight}}px;" mode="widthFix" src="{{item}}" bindload="imageLoad"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<!-- 信息 -->
+<view class="goodsbox">
+  <view class="goods_title">{{goods.name}}</view>
+  <view class="hotel_type" >
+    <view wx:for="{{goods.attr}}">{{item.name}}</view>
+  </view>
+</view>
+
+<!-- 详细推荐 -->
+<view class="info">
+  <text>亮点推荐</text>
+  <image  class="infoimg" src="{{goods.spic}}"></image>
+</view>
+
+<view class="pinFooter">
+  <navigator class="gohome" open-type="reLaunch" url="/pages/index/index">
+    <image src="/static/images/ghome.png"></image>
+    <view>首页</view>
+  </navigator>
+  <view class="collect" bindtap='collection' id='{{courseId}}'>
+    <image src="/static/images/kf.jpg" class="hide"></image>
+    <view>客服</view>
+  </view> 
+  <view class="justPin" bindtap='gomap' data-lon="{{goods.address_y}}" data-lat="{{goods.address_x}}" data-address="{{goods.name}}" >去酒店</view>
+</view>
+
+
+
+<view class="page">
+    <mp-gallery show="{{show}}" bindchange="change" binddelete="delete" bindhide="hide" img-urls="{{imgUrls}}" delete hide-on-click="{{true}}" current="1"></mp-gallery>
+</view>
+

@@ -28,13 +28,16 @@ App({
     switch (that.globalData.run_env) {
       case 0:
         // 0 - 生产环境
-        apiBaseUrl = '';
+        apiBaseUrl = 'http://122.51.113.23/public/kimono/';
         break;
       case 1:
         // 1- 测试环境
-        apiBaseUrl = 'http://cover.cn/public/index.php/kimono/';
+        apiBaseUrl = 'http://101.200.123.34:82/public/index.php/api/';
         break;
-
+      case 2:
+        // 2- 测试环境
+        apiBaseUrl = 'http://think.com/public/index.php/api/';
+        break;
       default:
         // 测试环境
         apiBaseUrl = 'http://cover.cn/public/index.php/kimono/';
@@ -79,4 +82,55 @@ App({
   preventTouchMove: function () {
     // do nothing. 为了拦截在蒙版上的鼠标滑动
   },
+  tabbar: {
+    color: "#242424",
+    selectedColor: "#fa8582",
+    backgroundColor: "#ffffff",
+    borderStyle: "#d7d7d7",
+    list: [
+      {
+        pagePath: "/pages/user/user",
+        text: "我的",
+        selected: false
+      },
+      {
+        pagePath: "/pages/goodslist/goodslist",
+        text: "穿和服",
+        selected: false
+      },
+      {
+        iconPath: "../../static/images/saom.jpg",
+        selected: false
+      },
+      {
+        pagePath: "/pages/hotel/hotel",      
+        text: "归还区",
+        selected: false
+      },
+      {
+        text: "更多",
+        selected: false
+      }
+    ],
+    position: "bottom"
+  },
+  changeTabBar: function () {
+    var _curPageArr = getCurrentPages();
+    var _curPage = _curPageArr[_curPageArr.length - 1];
+    var _pagePath = _curPage.__route__;
+    if (_pagePath.indexOf('/') != 0) {
+      _pagePath = '/' + _pagePath;
+    }
+    var tabBar = this.tabbar;
+    for (var i = 0; i < tabBar.list.length; i++) {
+      console.log(_pagePath + '--' + tabBar.list[i].pagePath)
+      tabBar.list[i].selected = false;
+      if (tabBar.list[i].pagePath == _pagePath) {
+        tabBar.list[i].selected = true;//根据页面地址设置当前页面状态  
+      }
+    }
+    _curPage.setData({
+      tabbar: tabBar
+    });
+  }, 
 })

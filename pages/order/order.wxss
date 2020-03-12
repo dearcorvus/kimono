@@ -1,0 +1,47 @@
+/* pages/order/order.wxss */
+page{
+  background-color: #f4f4f4;
+}
+.order_box{
+  width: 95%;
+  margin: 20rpx auto;
+}
+.order_child{
+  width: 100%;
+  min-height: 310rpx;
+  border-radius: 10rpx;
+  background-color:#fff; 
+  padding: 20rpx 40rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+}
+.order_info{
+  width: 100%;
+  border-bottom: 1px solid #e3e3e3;
+  padding-bottom: 20rpx;
+  position: relative;
+}
+.order_info text{
+  font-size: 32rpx;
+  color: #545454;
+  line-height: 80rpx;
+}
+.order_time{
+  font-size:28rpx;
+  color: #989898;
+  line-height: 70rpx; 
+}
+.order_day{
+  font-size: 26rpx;
+  color: #545454;  
+}
+.order_static{
+  font-size: 30rpx;
+  color: #5b75c2;
+  line-height: 80rpx;
+}
+.price{
+  font-size: 40rpx;
+  position: absolute;
+  right: 0;bottom: 10rpx;
+}

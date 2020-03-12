@@ -1,2 +1,56 @@
 <!--pages/user/user.wxml-->
-<text>pages/user/user.wxml</text>
+<view class="header" style="background-image:url(../../static/images/userheader.jpg)">
+  <view class="user_box">
+    <image class='userimg' src="{{user.avatar}}"></image>
+    <view class="heade_name"> 
+      <text>{{user.name}}</text>
+      <view>{{user.mobile == null ? '**********' :user.mobile }}</view>
+    </view>
+  </view>
+</view>
+
+<view class="userlist">
+  <view class="list_title">租聘</view>
+  <view class="list_ul">
+    <navigator url="../order/order" class="list_li" hover-class="none">
+      <view>
+        <image src="../../static/images/l.png"></image>
+        <text> 订单</text>
+      </view>
+      <view>
+        <text>租聘{{order != null ? order : 0}}次</text>
+        <image src="../../static/images/r.png" ></image>
+      </view>  
+    </navigator>    
+    <navigator url="../dweb/dweb?oid=1" class="list_li" hover-class="none">
+      <view>
+        <image src="../../static/images/j.png"></image>
+        <text> 计价规则</text>
+      </view>
+      <view>
+        <text>计价规则</text>
+        <image src="../../static/images/r.png" ></image>
+      </view>
+    </navigator>
+    <navigator url="../dweb/dweb?oid=2" class="list_li" hover-class="none">
+      <view>
+        <image src="../../static/images/f.png"></image>
+        <text> 法律条款及隐私政策</text>
+      </view>
+      <view>
+        <text></text>
+        <image src="../../static/images/r.png" ></image>
+      </view>
+    </navigator>
+    <navigator url="../order/order" class="list_li" hover-class="none">
+      <view>
+        <image src="../../static/images/k.png"></image>
+        <text> 客服中心</text>
+      </view>
+      <view>
+        <text></text>
+        <image src="../../static/images/r.png" ></image>
+      </view>
+    </navigator>       
+  </view>
+</view>

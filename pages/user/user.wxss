@@ -1,1 +1,77 @@
 /* pages/user/user.wxss */
+page{
+  background-color:#f4f4f4; 
+}
+.header{
+  width: 100%;
+  height: 170rpx;
+  background-color:#53cfb5; 
+  background-image: linear-gradient(#53cfb5, #86fee3);
+  background-size:100% 100%; 
+}
+.user_box{
+  /* padding-top:10rpx;  */
+  margin-left:60rpx;
+  display:flex; 
+}
+.userimg{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  border:10rpx solid #fff;
+}
+.heade_name{
+  font-size: 34rpx;
+  color:#fff;
+  margin-left: 40rpx;
+  padding-top: 30rpx;
+}
+.heade_name view{
+  font-size: 22rpx;
+  line-height: 50rpx;
+}
+
+/* list */
+.userlist{
+  width: 94.66%;
+  margin:10rpx auto;
+}
+.list_title{
+  font-size: 26rpx;
+  color:#4a4a4a;
+  line-height: 86rpx;
+}
+.list_ul{
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 10rpx;
+}
+.list_li{
+  width: 90%;
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  font-size: 34rpx;
+  color: #4a4a4a;
+  border-bottom: 1px solid #e3e3e3;
+}
+.list_li:nth-last-child(1){
+  border:none;
+}
+
+.list_li image{
+  width: 36rpx;
+  height: 40rpx;
+}
+.list_li view{
+  display: flex;
+  align-items: center;
+}
+.list_li text{
+  padding:0 30rpx;
+}
+.list_li view:nth-child(2){
+  font-size: 26rpx;
+}

@@ -1,1 +1,49 @@
 /* pages/components/tabbar/tabbar.wxss */
+/* 定义组件 */
+.tabbar_box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 300;
+    width: 100%;
+    height: 120rpx;
+    border-top: 1rpx solid #d7d7d7; 
+    background-color: #fff;
+    -moz-box-shadow:0px -3px 17px #d7d7d7; -webkit-box-shadow:0px -3px 17px #d7d7d7; box-shadow:0px -3px 17px #d7d7d7;
+}
+
+.tabbar_nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 32rpx;
+    height: 100%;
+}
+
+.tabbar_icon{
+    width: 150rpx;
+    height:50rpx;
+    position:relative;
+    top:-50rpx;
+    border-radius: 50%; 
+    -moz-box-shadow:0px -3px 17px #d7d7d7; -webkit-box-shadow:0px -3px 17px #d7d7d7; box-shadow:0px -3px 17px #d7d7d7;   
+}
+
+.commodity_attr_box {
+  width: 200rpx;
+  overflow: hidden;
+  position: fixed;
+  bottom:140rpx; 
+  right: 10rpx;
+  z-index: 2000;
+  background: #fff;
+  padding-top: 0rpx;
+  border-radius: 10rpx;  
+}
+.commodity_attr_box cover-image{
+  border:none;
+}

@@ -1,0 +1,26 @@
+<!-- 组件模板 -->
+<view class="wrapper">
+
+  <slot></slot>
+    <view class='tit_seabox'>
+        <view class="tit_seabox_bar {{addflag?'tit_seabox_add':''}} {{searchflag?'tit_start_search':''}}">
+            <icon type='search' size="32rpx"></icon>
+            <input type="text" bindinput="searchList" bindconfirm="endsearchList" bindfocus='getfocus' bindblur="blursearch" confirm-type='search' value='{{searchstr}}' placeholder='请输入...' />
+            <icon bindtap='activity_clear' wx:if="{{searchflag}}" type='clear' size="28rpx"></icon>
+        
+        </view>
+        <view wx:if="{{searchflag}}" bindtap='cancelsearch' class="activity_seabtn">取消</view>
+        <view class='activity_add' wx:if="{{addflag}}"><image bindtap='addhandle' src='{{addimg}}'></image></view>
+    </view>
+   
+  <!-- 商品列表 -->
+  <view class="help-select-contet" >
+    <view class="help-select-card" wx:for="{{goods_item}}" wx:key=''>
+      <navigator url="../goods/goods?type=2&detail={{item.id}}">
+        <image mode="widthFix" src="{{item.img}}" class='help-select-iamge'></image>
+        <view>{{item.name}}</view>   
+      </navigator>
+    </view> 
+  </view>
+
+</view>

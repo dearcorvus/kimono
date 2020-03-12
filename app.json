@@ -5,13 +5,29 @@
     "pages/components/tabbar/tabbar",
     "pages/user/user",
     "pages/goods/goods",
-    "pages/hotel/hotel"
+    "pages/hotel/hotel",
+    "pages/goodslist/goodslist",
+    "pages/search/search",
+    "pages/components/gallery/gallery",
+    "pages/order/order",
+    "pages/dweb/dweb",
+    "pages/info/info",
+    "pages/pay/pay",
+    "pages/rule/rule",
+    "pages/problem/problem",
+    "pages/hotelinfo/hotelinfo",
+    "pages/orderinfo/orderinfo"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#53cfb5",
     "navigationBarTitleText": "首页",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

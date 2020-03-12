@@ -1,13 +1,45 @@
 <!--index.wxml-->
+<!-- 头部 -->
+<view class="header" style="background-image:url({{top}})">
+  <view class="header_box">
+    <text>Hi,{{username}}</text>
+    <view>这里有你喜欢的和服，哦！</view>
+  </view>
+</view>
+
+<view class="hot_box">
+  <view class="hot_title">今日热推</view>
+  <view class="hot_child" wx:for='{{bannerInfo}}'  wx:key='' >
+      <image mode='widthFix' src="{{item.pic}}" data-val="{{item.url}}" bindtap="goodsFunction"></image>
+  </view>     
+</view>
 
 
+<!--屏幕背景变暗的背景  -->
+<cover-view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></cover-view>
+
+<!--弹出框  -->
+<cover-view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+  <!-- <cover-image src="../../static/images/more.jpg" mode="widthFix" ></cover-image> -->
+  <cover-view class="bbox">
+    <cover-view class="b_li" bindtap="problem">
+      <cover-image src="../../static/images/gz.png" mode="widthFix" class="bimg"></cover-image>
+      <cover-view>故障上报</cover-view>
+    </cover-view>  
+    <cover-view class="b_li"  data-val="{{mobile}}" bindtap="callfunction">
+      <cover-image src="../../static/images/kefu.png" mode="widthFix" class="bimg"></cover-image>
+      <cover-view>联系客服</cover-view>
+    </cover-view>     
+  </cover-view>
+</cover-view>
 
 <!-- 底部菜单 -->
 <view class="page">
   <import src="../components/tabbar/tabbar" />
-  <template is="tabbar" data="{{tabbar}}"/>
+  <view class="footer">
+    <template is="tabbar" data="{{tabbar}}"/>
+  </view>
 </view>
-
 
 <!-- 用户授权弹框 -->
 <view class="justZhi" wx:if="{{isuserInfo}}">

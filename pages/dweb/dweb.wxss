@@ -1,0 +1,5 @@
+/* pages/dweb/dweb.wxss */
+.text_box{
+  width: 95%;
+  margin: 10rpx auto;
+}

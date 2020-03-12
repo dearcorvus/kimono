@@ -1,0 +1,8 @@
+<!--pages/rule/rule.wxml-->
+<view class="text_box">
+<!-- rich-text.wxml -->
+<rich-text nodes="{{nodes}}" class="box"></rich-text>
+</view>
+<navigator class="btn" url="../pay/pay" open-type='redirectTo'>
+  我同意
+</navigator>

@@ -1,2 +1,47 @@
 <!--pages/goods/goods.wxml-->
-<text>pages/goods/goods.wxml</text>
+<!-- banner -->
+<view class="page-section page-section-spacing swiper" bindtap="showbanner">
+  <swiper indicator-dots="{{indicatorDots}}"  style="width:{{imagewidth}}px;height:{{imageheight}}px;" 
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" >
+    <block wx:for="{{imgUrls}}" wx:key="*this">
+      <swiper-item>
+        <image class="swiper-item" style="width:{{imagewidth}}px;height:{{imageheight}}px;" mode="widthFix" src="{{item}}" bindload="imageLoad"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<!-- 信息 -->
+<view class="goodsbox">
+  <view class="goods_title">{{goods.name}}</view>
+  <view class="goods_stitle">
+    <text>{{goods.grade_name}}</text>
+    <text>租用次数:{{goods.num}}</text>
+  </view>
+</view>
+
+<!-- 详细推荐 -->
+<view class="info">
+  <text>亮点推荐</text>
+  <!-- rich-text.wxml -->
+<rich-text nodes="{{nodes}}"></rich-text>
+</view>
+
+<view class="pinFooter">
+  <navigator class="gohome" open-type="reLaunch" url="/pages/index/index">
+    <image src="/static/images/ghome.png"></image>
+    <view>首页</view>
+  </navigator>
+  <view class="collect" bindtap='callfunction' data-val="{{tel}}">
+    <image src="/static/images/kf.jpg" class="hide"></image>
+    <view>客服</view>
+  </view> 
+  <view class='{{status == 1 ? "justPins" : "justPin" }}' bindtap='{{status == 1 ? "" : "submitBTN" }}' hidden="{{ type == 1 ? false : true}}">{{status == 1 ? "进行中" : "立即租用" }}</view>
+  <view class="justPin" bindtap='hotelBTN' hidden="{{ type == 2 ? false : true}}">查找拥有酒店</view>
+</view>
+
+
+
+<view class="page">
+    <mp-gallery show="{{show}}" bindchange="change" binddelete="delete" bindhide="hide" img-urls="{{imgUrls}}" delete hide-on-click="{{true}}" current="1"></mp-gallery>
+</view>

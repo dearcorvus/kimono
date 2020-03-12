@@ -1,0 +1,5 @@
+<!--pages/dweb/dweb.wxml-->
+<view class="text_box">
+<!-- rich-text.wxml -->
+<rich-text nodes="{{nodes}}"></rich-text>
+</view>

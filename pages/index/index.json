@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "共享和服"
+  "navigationBarTitleText": "共享和服",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor":"#53cfb5",
+  "usingComponents": {}
 }

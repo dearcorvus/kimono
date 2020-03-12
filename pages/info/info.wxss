@@ -1,0 +1,26 @@
+/* pages/info/info.wxss */
+.ulbox{
+  width: 590rpx;
+  height: 100rpx;
+  margin: 0 auto;
+  border-bottom: 1px solid #e5e5e5;
+}
+.ulbox:nth-child(1){
+  margin-top: 100rpx;
+}
+.ulbox input{
+  width: 96%;
+  height: 100rpx;
+  font-size: 36rpx;
+  line-height: 100rpx;
+  margin: 0 auto;
+}
+.btn-area{
+  margin-top: 60rpx;
+}
+.btn-area button{
+  color:#868686;
+}
+.btn-area input{
+  display: none;
+}

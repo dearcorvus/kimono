@@ -1,0 +1,52 @@
+<!--pages/goodslist/goodslist.wxml-->
+<!-- 头部信息 -->
+<view class="top">
+  <view class="search"></view>
+  <view class="navbox">
+    <view class="{{nav === 1 ? 'nav_check' :'' }}" data-val='1' bindtap="urlshop">和服</view>
+    <view class="{{nav === 2 ? 'nav_check' :'' }}" data-val="2" bindtap="urlshop">酒店</view>
+  </view>
+  <navigator hover-class="none" url="../search/search">
+    <image class="search" src="../../static/images/search.jpg"></image>
+  </navigator>
+</view>
+
+<!-- 商品列表 -->
+<view class="help-select-contet" wx:if="{{nav === 1 ? true : false }}" wx:key=''>
+  <view class="help-select-card" wx:for="{{goods_item}}" wx:key=''>
+    <navigator url="../goods/goods?type=2&detail={{item.id}}">
+      <image mode="widthFix" src="{{item.img}}" class='help-select-iamge'></image>
+      <view>{{item.name}}</view>   
+    </navigator>
+  </view> 
+</view>
+
+<!-- 酒店列表 -->
+<view class="hotel_box" wx:if="{{nav === 2 ? true : false }}" >
+  <view class="hotel_child" wx:for='{{goods_item}}'   wx:key='' style="background-image:url({{item.pic}})">
+  <navigator url="../hotelinfo/hotelinfo?type=1&detail={{item.id}}">
+    <view class="hotel_info"> 
+      <view class="hotel_title">{{item.title}}</view>
+      <view class='hotel_time'>{{item.bank_hours}}</view>
+      <view class="hotel_address">{{item.address}}</view>
+    </view>
+  </navigator>
+  </view> 
+</view>
+
+
+
+
+<!-- 分类 -->
+<view class="goods_type" bindtap="listenerButton" style="display:{{nav === 2 ? 'none' :'' }}">
+  {{showtype}}
+</view>
+
+<!--默认action-sheet为隐藏，由button触发-->
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="listenerActionSheet">
+    <block wx:for-items="{{type_item}}" wx:key=''>
+        <action-sheet-item  bindtap="TypeFunction" data-id='{{item.id}}' data-val='{{item.title}}' >{{item.title}}</action-sheet-item>
+    </block>
+   <!--自动隐藏action-sheet-->
+   <action-sheet-cancel>取消</action-sheet-cancel>
+</action-sheet>
