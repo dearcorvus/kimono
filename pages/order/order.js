@@ -18,7 +18,7 @@ Page({
     var uid = wx.getStorageSync("user");
 
     wx.request({
-      url: app.url+'goods/order',
+      url: app.url+'index/order',
       data: {
         uid: uid.userid
       },

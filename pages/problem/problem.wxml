@@ -1,6 +1,12 @@
 <!--pages/problem/problem.wxml-->
 
 <view class="text_box">
-<!-- rich-text.wxml -->
-<rich-text nodes="{{nodes}}"></rich-text>
+  <view class="tel_box">
+    <text>联系方式</text>
+    <input value="{{userTell}}" bindblur='userTellInput' placeholder="请输入联系方式"></input>
+  </view>
+  <view>
+    <textarea placeholder="请输入详细内容"  value="{{userText}}" bindblur='userTextarea' ></textarea>
+  </view>
+  <view class="btn" bindtap="subfunction">提交</view>
 </view>

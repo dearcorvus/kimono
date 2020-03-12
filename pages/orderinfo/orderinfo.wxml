@@ -1,0 +1,29 @@
+<!--pages/orderinfo/orderinfo.wxml-->
+<wxs module="dateUtil" src="../../utils/dateTime.wxs"></wxs>
+
+<view class="box">
+  <text>{{order.nickname }}{{order.mobile}}</text>
+  <view wx:for='{{info}}'>
+          {{dateUtil.dateFormat(item.add_time,'YYYY年MM月dd日 hh时mm分ss秒')}}
+  </view>
+</view>
+<!-- 商品信息 -->
+<view class="box">
+  <image src="{{goods.img}}" class="goods_pic"></image>
+  <view class="goods_title">
+    <view>{{goods.name}}</view>
+     <view>{{goods.title}}</view>
+  </view>
+</view>
+
+<view wx:if='{{order.status  > 2 ? true : false}}' class="box">
+  <view>订单号:{{order.order_num}}</view>
+  <view>订单时间:{{order.mtime}}</view>
+  <view>订单价格:{{order.price}}</view>
+</view>
+
+
+
+<view class='pay' bindtap="payFunction" data-id="{{order.id}}" wx:if='{{order.status === 3}}' >支付</view>
+
+<view wx:if='{{order.status === 2}}'> 租聘成功 </view>

@@ -1,6 +1,6 @@
 <!--pages/pay/pay.wxml-->
 <view class="card">
-  <view>支付押金100元</view>
+  <view>支付押金{{price}}元</view>
   <text>随时可退</text>
 </view>
 

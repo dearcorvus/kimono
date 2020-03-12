@@ -32,7 +32,7 @@ Page({
     var uid = wx.getStorageSync("user");
 
     wx.request({
-      url: app.url+'goods/user',
+      url: app.url+'index/user',
       data: {
         uid:uid.userid
       },
@@ -46,11 +46,19 @@ Page({
         console.log(res)
         that.setData({
           user:res.data.data.user,
-          order: res.data.data.order
+          order: res.data.data.order,
+          mobile: res.data.data.mobile
         })
       },
     })
 
+  },
+  //联系客服
+  callfunction: function (e) {
+    console.log(e)
+    wx.makePhoneCall({
+      phoneNumber: e.currentTarget.dataset.val //仅为示例，并非真实的电话号码
+    })
   },
 
 })

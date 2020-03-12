@@ -1,0 +1,40 @@
+/* pages/orderinfo/orderinfo.wxss */
+.box{
+  width: 100%;
+  padding: 3%;
+  border-bottom: 30rpx solid #f7f7f7;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.box{
+  font-size: 26rpx;
+  color:#c9c9c9;
+  line-height: 44rpx;
+}
+.box text{
+  font-size: 30rpx;
+  color: #000;
+}
+.goods_pic{
+  width: 150rpx;
+  height: 150rpx;
+  float: left;
+  margin-right: 20rpx;
+}
+.goods_title{
+  float: left;
+  padding: 10rpx;
+}
+
+.pay{
+  width: 200rpx;
+  font-size:30rpx;
+  color: #fff; 
+  line-height: 80rpx;
+  text-align: center;
+  background-color:red; 
+  margin: 50rpx auto;
+  border-radius: 10rpx;
+}
+
